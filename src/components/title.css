@@ -1,0 +1,24 @@
+.Title {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 15px;
+    margin-bottom: 2em;
+    color: black;
+    font-style: i;
+    color: rgba(0, 0, 0, 0.884);
+}
+.style.header {
+     background: rgba(251, 202, 43, 1);
+}
+.style.header .home,
+  .demo .notificationsFrame .header .title {
+    color: #333333;
+}
+  
+  .demo .notificationsFrame .header .menuIcon .dashTop,
+  .demo .notificationsFrame .header .menuIcon .dashBottom,
+  .demo .notificationsFrame .header .menuIcon .circle {
+    background-color: #333333;
+  }
