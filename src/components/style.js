@@ -3,9 +3,10 @@ import React from 'react';
 function Header() {
     const style = {
         fontSize: '30px',
-        color: 'rgba(0, 0, 0, 0.884)',
+        color: 'rgb(71, 70, 70)',
         textAlign: 'center',
-        fontStyle: 'inherit'
+        fontStyle: 'inherit',
+        border: 'none'
     }
     return(
         <header>

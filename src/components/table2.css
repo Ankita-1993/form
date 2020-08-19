@@ -1,0 +1,24 @@
+.ReactTable .rt-thead .-sort-asc {
+    box-shadow: none !important;
+}
+  
+.ReactTable .rt-thead .-sort-asc::before {
+    content: "▲";
+    float: right;
+    margin-right: 16px;
+}
+  
+.ReactTable .rt-thead .-sort-desc {
+    box-shadow: none !important;
+}
+  
+.ReactTable .rt-thead .-sort-desc::before {
+    content: "▼";
+    float: right;
+    margin-right: 16px;
+}
+.ReactTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+  

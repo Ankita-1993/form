@@ -10,12 +10,11 @@ class Routes extends Component {
         return (  
             <Router history={history}>
                 <Switch>
+                    <Route path='/' exact component={Form}/>
                     <Route path='/userlist' component={Assign}/>
-                    <Route path='/form' component={Form}/>
                 </Switch>
             </Router>
         );
     }
 }
- 
 export default Routes;

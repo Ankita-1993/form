@@ -45,6 +45,5 @@ class ExportToExcel extends Component {
             </div>
         );
     }
-}
- 
+} 
 export default ExportToExcel;

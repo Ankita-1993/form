@@ -8,6 +8,7 @@ import './button.css'
 // import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import history from './../history';
+import './table2.css';
 class Assign extends Component {
     constructor(props){
         super(props)
@@ -90,8 +91,8 @@ class Assign extends Component {
                         <div inline>
                             { filtredData() }
                             <ExportToExcel posts={this.reactTable}/>
-                            <form inline>
-                                <Button className='button' variant="btn btn-success" onClick={() => history.push('/Form')}>Add</Button>
+                            <form>
+                                <Button className='button' variant="btn btn-success" onClick={() => history.push('/')}>Add</Button>
                             </form>
                             {/* <BrowserRouter>
                                 <div>
