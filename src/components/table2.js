@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
-// import Navigation from './navigation';
 import ExportToExcel from './ExportToExcel';
 import './button.css'
-// import Form from './form';
-// import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import history from './../history';
 import './table2.css';
@@ -18,11 +16,19 @@ class Assign extends Component {
     }
 
     componentDidMount() {
-        const url = 'https://rest.digishaala.com/api/roamers/all';
-        fetch(url, {
-            method: 'GET'
-        }).then(response=> response.json()).then(posts =>{
-            this.setState({posts: posts})
+        // const url = 'https://jsonplaceholder.typicode.com/posts';
+        // fetch(url, {
+        //     method: 'GET'
+        // }).then(response=> response.json()).then(posts =>{
+        //     this.setState({posts: posts})
+        // })
+        axios.get('https://rest.digishaala.com/api/roamers/all')
+        .then(response => {
+            console.log(response)
+            this.setState({posts:response.data})
+        })
+        .catch(error=>{
+            console.log(error)
         })
     }
     render() {
@@ -88,12 +94,11 @@ class Assign extends Component {
                 {(state, filtredData, instance) =>{
                     this.reactTable = state.pageRows.map(post => {return post._original});
                     return (
-                        <div inline>
+                        <div>
                             { filtredData() }
-                            <ExportToExcel posts={this.reactTable}/>
-                            <form>
-                                <Button className='button' variant="btn btn-success" onClick={() => history.push('/')}>Add</Button>
-                            </form>
+                            <ExportToExcel posts={this.reactTable}/>                          
+                            <Button className='button' variant="btn btn-success" onClick={() => history.push('/')}>Add</Button>
+                            
                             {/* <BrowserRouter>
                                 <div>
                                     <Link to='/form'>

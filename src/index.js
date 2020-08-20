@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import Assign from './components/table2'
+// import Assign from './components/table2';
+// import PostForm from './Assignment/form3';
+// import App from './Assignment/formtable'
 // import Form from './components/form'
 import * as serviceWorker from './serviceWorker';
 
